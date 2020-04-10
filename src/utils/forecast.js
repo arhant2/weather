@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Cannot give the weather forecast for the selected location!', undefined);
         }else{
             callback(undefined, 
-            `${response.body.current.weather_descriptions[0]}. It is ${response.body.current.temperature} degrees. It feels like ${response.body.current.feelslike} degrees out.`   
+            `${response.body.current.weather_descriptions[0]}. It is ${response.body.current.temperature} degrees. It feels like ${response.body.current.feelslike} degrees out. The humidity is ${response.body.current.humidity}%`   
             );  
         }
     });
